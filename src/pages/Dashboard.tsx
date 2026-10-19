@@ -30,7 +30,7 @@ export function Dashboard() {
   if (loading) return <p>Lade...</p>
   if (error) return <p className="error">Fehler: {error}</p>
 
-  const { wins, draws, totalMatches } = computeStandings(games, matches)
+  const { wins, totalMatches } = computeStandings(games, matches)
   const gameById = new Map(games.map((g) => [g.id, g]))
   const recent = matches.slice(0, 5)
 
